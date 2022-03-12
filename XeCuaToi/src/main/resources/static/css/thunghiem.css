@@ -1,0 +1,27 @@
+.row {
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.col-sm-4{
+	text-align: center;
+}
+.slogan{
+	background-color: grey;
+	text-align: center;
+	color: white; 
+	font-size: 24px;
+}
+body{
+	font-family: Rotobo;
+}
+img{
+	max-width: 100%;
+}
+.section2{
+	background-color: blue;
+	color: white;
+}
+.chaomung{
+	border-left: soilid 2px black;
+	border-right: soilid 2px black;
+}
