@@ -6,19 +6,6 @@
 <link href="css/thunghiem.css" rel="stylesheet">
 </head>
 <body>
-	<h1 th:text="${dsThuNghiem}"></h1>
-
-	<table>
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-		</tr>
-
-		<tr th:each="thuNghiem : ${danhSachThuNghiem}">
-			<td th:text="${thuNghiem.getId()}"></td>
-			<td th:text="${thuNghiem.getName()}"></td>
-		</tr>
-	</table>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4" id="col1">
@@ -37,6 +24,27 @@
 				<a href="http//localhost:8080/thunghiem"> <img alt="loi img"
 					src="https://hyundai-hanoi.com.vn/wp-content/uploads/2020/06/logo-daily.png">
 				</a>
+			</div>
+		</div>
+	</div>
+	<div class="menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+				<a href="http//localhost:8080/thunghiem">HUYNDAI PHAM HUNG</a>
+				</div>
+				<div class="col-sm-9">
+					<div class="menu-wrapper menu-gold">
+						<ul class="menu" style="color: white;">
+							<li th:each="mn : ${menu}"><a target="_blank"
+								th:text="${mn.name}" th:if="${mn.id_cha == 0}"></a>
+								<ul>
+									<li th:each="mn1 : ${menu}" th:if="${mn1.id_cha == mn.id}"><a
+										target="_blank" th:text="${mn1.name}"></a></li>
+								</ul></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -198,5 +206,96 @@
 	</div>
 </body>
 <style>
+/* menu */
+.menu-wrapper, .menu a {
+	width: 100%;
+}
+
+.menu::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.menu a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.menu li {
+	position: relative;
+}
+
+.menu>li {
+	float: left;
+}
+
+.menu, .menu ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	background: BLUE;
+}
+
+.menu ul li+li {
+	border-top: 1px solid #fff;
+}
+
+.menu ul {
+	position: absolute;
+	
+}
+
+.menu>li ul, .menu ul ul {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+	z-index: -1;
+	visibility: hidden;
+}
+
+.menu>li ul {
+	top: 130%;
+	left: 0;
+}
+
+.menu ul ul {
+	left: 130%;
+	top: 0;
+}
+
+
+.menu>li:hover>ul {
+	top: 100%;
+	opacity: 1;
+	z-index: 1;
+	visibility: visible;
+}
+
+.menu ul>li:hover>ul {
+	left: 100%;
+	opacity: 1;
+	z-index: 1;
+	visibility: visible;
+}
+.menu ul a{
+  width: auto;
+}
+.menu > li ul{
+  top: 130%;
+  left: 0;
+}
+
+.menu ul ul{
+  left: 130%;
+  top: 0;
+}
+
+
+
+/* ends */
 </style>
 </html>

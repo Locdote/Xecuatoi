@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name= "test")
+@Table(name= "menu")
 
 public class ThuNghiemEntity {
 	
@@ -19,6 +19,16 @@ public class ThuNghiemEntity {
 	
 	@Column(name= "name")
 	public String name;
+	
+	@Column(name= "id_cha")
+	public int id_cha;
+	
+	public int getId_cha() {
+		return id_cha;
+	}
+	public void setId_cha(int id_cha) {
+		this.id_cha = id_cha;
+	}
 	public int getId() {
 		return id;
 	}

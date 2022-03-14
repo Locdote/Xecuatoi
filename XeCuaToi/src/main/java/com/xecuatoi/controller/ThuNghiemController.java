@@ -18,9 +18,8 @@ public class ThuNghiemController {
 	
 	@GetMapping("/thunghiem")
 	public String thunghiem(Model model) {
-		List<ThuNghiemEntity> dsThuNghiem = thuNghiemService.getAll();
 		
-		model.addAttribute("danhSachThuNghiem", dsThuNghiem);
+		model.addAttribute("menu", thuNghiemService.getAll()  );
 		return "thunghiem.html";
 		
 	}
