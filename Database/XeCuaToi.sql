@@ -1,39 +1,24 @@
-create database `XeCuaToi`;
+create database `Xecuatoi`;
 
-use `XeCuaToi`;
-drop table `menu`;
+use `Xecuatoi`;
+
 create table `menu`(
-id_menu int auto_increment,
-gia_tri varchar(225),
-primary key(id_menu)
+	id int auto_increment,
+    `name` varchar(225),
+    id_cha int,
+    primary key(id)
 );
 insert into `Xecuatoi`.`menu`
-(`id_menu`,`gia_tri`) values
-(12313,'Trang chu'),
-(123131,'Cac mau xe'),
-(1231311,'Gi xe huyndai');
-
-create table `mauxe`(
-id_mauxe int auto_increment,
-huyndai_accent varchar(225),
-huyndai_santafe varchar(225),
-huyndai_tucson varchar(225),
-huyndai_sonata varchar(225),
-huyndai_elantra varchar(225),
-primary key(id_mauxe)
-);
-drop table`ThuNghiem`;
-create table `ThuNghiem`(
-id int auto_increment,
-name varchar(225),
-primary key(id)
-);
-insert into`xecuatoi`.`ThuNghiem`
-(`id`,`name`) values
-(1,'ABC'),
-(2,'ABC'),
-(3,'ABC'),
-(4,'ABC');
-select * from `menu`
-
-
+(`id`, `name`,`id_cha`) values
+('2', 'TRANG CHU','0'),
+('3', 'CÁC MẪU XE','0'),
+('4', 'GIÁ XE HUYNDAI','0'),
+('5', 'MUA XE TRẢ GÓP','0'),
+('6', 'TIN TƯC','0'),
+('7', 'LIÊN HỆ','0'),
+('8', 'Huyndai Sedan','3'),
+('9', 'Huyndai Accent','3'),
+('10', 'Huyndai Santafe','3'),
+('11', 'Huyndai Tucson','3'),
+('12', 'Huyndai Sonata','3'),
+('13', 'Huyndai Elantra','3');

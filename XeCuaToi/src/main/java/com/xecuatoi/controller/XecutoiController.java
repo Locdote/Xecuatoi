@@ -1,7 +1,5 @@
 package com.xecuatoi.controller;
 
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,22 +11,16 @@ import com.xecuatoi.entity.XecuatoiEntity;
 import com.xecuatoi.service.XecuatoiService;
 
 @Controller
-public class XecuatoiController {
-	
+public class XecutoiController {
+
 	@Autowired
-	private XecuatoiService xecuatoiService;
+	public XecuatoiService xeCuatoiService;
 	
-	public XecuatoiController() {
-		
-	}
 	@GetMapping("/xecuatoi")
 	public String xecuatoi(Model model) {
 		
-		List<XecuatoiEntity> danhSachMauXe = xecuatoiService.getAll();
-		
-		model.addAttribute("danhSachMauXe", danhSachMauXe);
+		model.addAttribute("menu", xeCuatoiService.getAll()  );
 		return "xecuatoi.html";
 		
 	}
-
 }
