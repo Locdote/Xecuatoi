@@ -19,8 +19,16 @@ public class XecutoiController {
 	@GetMapping("/xecuatoi")
 	public String xecuatoi(Model model) {
 		
+		model.addAttribute("contenthtml", "trangchu.html"  );
 		model.addAttribute("menu", xeCuatoiService.getAll()  );
 		return "xecuatoi.html";
 		
+	}
+	@GetMapping("/tintuc")
+	public String trangchu(Model model) {
+		
+		model.addAttribute("contenthtml", "tintuc.html"  );
+		model.addAttribute("menu", xeCuatoiService.getAll()  );
+		return "xecuatoi.html";
 	}
 }
