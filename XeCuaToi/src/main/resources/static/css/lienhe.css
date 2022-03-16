@@ -1,0 +1,52 @@
+.xct-menu-bar {
+	background-color: #F5F5F5;
+	min-height: 30px;
+	width: auto;
+	padding: 10px;
+}
+
+.xct-lienhe .col-md-9 .row .col-md-12 h4 {
+	padding-left: 0.4em;
+	border-left: solid 3px #135E98;
+	font-weight: bold;
+}
+
+.xct-lienhe p {
+	margin-bottom: 2px;
+}
+
+.xct-lienhe i {
+	font-size: 15px;
+}
+
+.xct-primary-color {
+	color: #135E98;
+}
+
+.xct-bold {
+	font-weight: bold;
+}
+
+.xct-lienhe-btn {
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    transition: 0.5s;
+    box-shadow: 0 5px 0 #0c3758;
+    background-color: #135e98;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px 8px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+}
+
+.xct-lienhe-btn:hover {
+	color: #fff;
+}
+
