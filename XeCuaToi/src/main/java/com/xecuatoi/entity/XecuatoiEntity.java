@@ -20,6 +20,9 @@ public class XecuatoiEntity {
 	@Column(name= "name")
 	public String name;
 	
+	@Column(name= "url")
+	public String url;
+	
 	@Column(name= "id_cha")
 	public int id_cha;
 	
@@ -41,5 +44,12 @@ public class XecuatoiEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
 	
 }

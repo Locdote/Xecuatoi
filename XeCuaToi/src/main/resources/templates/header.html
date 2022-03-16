@@ -29,11 +29,11 @@
 				<div class="col-sm-9">
 					<div class="menu-wrapper menu-gold">
 						<ul class="menu" style="color: white;">
-							<li th:each="mn : ${menu}"><a target="_blank"
+							<li th:each="mn : ${menu}"><a target="_blank" th:href="${mn.url}"
 								th:text="${mn.name}" th:if="${mn.id_cha == 0}"></a>
 								<ul>
 									<li th:each="mn1 : ${menu}" th:if="${mn1.id_cha == mn.id}"><a
-										target="_blank" th:text="${mn1.name}"></a></li>
+										target="_blank" th:href="${mn1.url}" th:text="${mn1.name}"></a></li>
 								</ul></li>
 						</ul>
 					</div>
