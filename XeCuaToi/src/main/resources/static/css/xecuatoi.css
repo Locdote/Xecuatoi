@@ -50,3 +50,6 @@ img {
 	text-align: center;
 	padding-top: 50px;
 }
+table{
+	border: solid 1px grey;
+}

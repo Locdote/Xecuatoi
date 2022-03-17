@@ -26,17 +26,35 @@ public class XecutoiController {
 		return "xecuatoi.html";
 		
 	}
+	
 	@GetMapping("/tintuc")
-	public String trangchu(Model model) {
+	public String tintuc(Model model) {
 		
-		model.addAttribute("contenthtml", "tintuc.html"  );
-		model.addAttribute("menu", xeCuatoiService.getAll()  );
+		model.addAttribute("contenthtml", "tintuc.html");
+		model.addAttribute("tenTrang", "Tin tức");
+		model.addAttribute("menu", xeCuatoiService.getAll());
+		return "xecuatoi.html";
+	}
+	
+	@GetMapping("/lienhe")
+	public String lienhe(Model model) {
+		
+		model.addAttribute("contenthtml", "lienhe.html");
+		model.addAttribute("tenTrang", "Liên hệ");
+		model.addAttribute("menu", xeCuatoiService.getAll());
 		return "xecuatoi.html";
 	}
 	@GetMapping("/cacmauxe")
 	public String cacmauxe(Model model) {
 		
 		model.addAttribute("contenthtml", "cacmauxe.html"  );
+		model.addAttribute("menu", xeCuatoiService.getAll()  );
+		return "xecuatoi.html";
+	}
+	@GetMapping("/hyundaihatchbach")
+	public String hyundaihatchbach(Model model) {
+		
+		model.addAttribute("contenthtml", "hyundaihatchbach.html"  );
 		model.addAttribute("menu", xeCuatoiService.getAll()  );
 		return "xecuatoi.html";
 	}
