@@ -58,5 +58,12 @@ public class XecutoiController {
 		model.addAttribute("menu", xeCuatoiService.getAll()  );
 		return "xecuatoi.html";
 	}
-	
+	@GetMapping("/ngayhoi2017")
+	public String ngayhoi2017(Model model) {
+		
+		model.addAttribute("contenthtml", "ngayhoi2017.html"  );
+		model.addAttribute("tenTrang", "Ngày hội Elantra 2017");
+		model.addAttribute("menu", xeCuatoiService.getAll()  );
+		return "xecuatoi.html";
+	}
 }

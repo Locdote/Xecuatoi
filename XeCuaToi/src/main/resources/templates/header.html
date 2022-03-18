@@ -1,44 +1,50 @@
 <!-- start header -->
-<div class="container">
+<div class="container" id="header">
+	<div class="row">
+		<div class="col-sm-4" id="col1">
+			<a href="/xecuatoi"> <img
+				style="padding-top: 15px"
+				src="https://hyundai-hanoi.com.vn/wp-content/uploads/2018/06/logot10.png"
+				alt="loi img">
+			</a>
+		</div>
+		<div class="col-sm-4" style="text-align: center;">
+			<strong><span class="hotline"
+				style="color: red; font-size: 25; padding-bottom: 10px">
+					HOTLINE:<a href="tel:0989 38 6679">0989 38 6679</a></strong> </span></br> <span
+				class="diachi">Dia chi: 16A Pham Hung, Mai Dich, Cau giay, Ha
+				Noi </span>
+		</div>
+		<div class="col-sm-4">
+			<a href="/xecuatoi"> <img alt="loi img"
+				style="padding-top: 15px"
+				src="https://hyundai-hanoi.com.vn/wp-content/uploads/2020/06/logo-daily.png">
+			</a>
+		</div>
+	</div>
+</div>
+<div class="menu">
+	<div class="container" >
 		<div class="row">
-			<div class="col-sm-4" id="col1">
-				<a href="http//localhost:8080/xecuatoi"> <img
-					src="https://hyundai-hanoi.com.vn/wp-content/uploads/2018/06/logot10.png"
-					alt="loi img">
-				</a>
+			<div class="col-sm-3">
+				<a href="/xecuatoi"><i
+					class="material-icons" style="color: white; font-size: 15px">toys
+				</i>  HUYNDAI PHAM HUNG</a>
 			</div>
-			<div class="col-sm-4">
-				<span class="hotline"> HOTLINE: <a href="tel:0989 38 6679">0989
-						38 6679</a>
-				</span></br> <span class="diachi">Dia chi: 16A Pham Hung, Mai Dich, Cau
-					giay, Ha Noi </span>
-			</div>
-			<div class="col-sm-4">
-				<a href="http//localhost:8080/xecuatoi"> <img alt="loi img"
-					src="https://hyundai-hanoi.com.vn/wp-content/uploads/2020/06/logo-daily.png">
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="menu">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-				<a href="http//localhost:8080/xecuatoi">HUYNDAI PHAM HUNG</a>
-				</div>
-				<div class="col-sm-9">
-					<div class="menu-wrapper menu-gold">
-						<ul class="menu" style="color: white;">
-							<li th:each="mn : ${menu}"><a target="_blank" th:href="${mn.url}"
-								th:text="${mn.name}" th:if="${mn.id_cha == 0}"></a>
-								<ul>
-									<li th:each="mn1 : ${menu}" th:if="${mn1.id_cha == mn.id}"><a
-										target="_blank" th:href="${mn1.url}" th:text="${mn1.name}"></a></li>
-								</ul></li>
-						</ul>
-					</div>
+			<div class="col-sm-9">
+				<div class="menu-wrapper menu-gold">
+					<ul class="menu" style="color: white;">
+						<li th:each="mn : ${menu}"><a target="_blank"
+							th:href="${mn.url}" th:text="${mn.name}"
+							th:if="${mn.id_cha == 0}"></a>
+							<ul>
+								<li th:each="mn1 : ${menu}" th:if="${mn1.id_cha == mn.id}"><a
+									target="_blank" th:href="${mn1.url}" th:text="${mn1.name}"></a></li>
+							</ul></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- End Header -->
+</div>
+<!-- End Header -->

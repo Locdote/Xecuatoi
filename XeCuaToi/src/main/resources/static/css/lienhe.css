@@ -49,4 +49,11 @@
 .xct-lienhe-btn:hover {
 	color: #fff;
 }
+.xct-lienhe .col-md-9 h5{
+	padding-left: 0.4em;
+	border-left: solid 3px #135E98;
+	font-weight: bold;
+}
+
+
 

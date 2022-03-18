@@ -1,7 +1,8 @@
+drop database if exists `Xecuatoi`;
 create database `Xecuatoi`;
 
 use `Xecuatoi`;
-drop table `menu`;
+drop table if exists `menu`;
 create table `menu`(
 	id int auto_increment,
     `name` varchar(225),

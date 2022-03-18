@@ -23,6 +23,7 @@ img {
 .chaomung {
 	border-left: solid 2px white;
 	border-right: solid 2px white;
+	padding-left: 0.4em;
 }
 
 .footer {
@@ -52,4 +53,7 @@ img {
 }
 table{
 	border: solid 1px grey;
+}
+.menu{
+	position: sticky;
 }
